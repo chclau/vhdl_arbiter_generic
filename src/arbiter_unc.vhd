@@ -57,7 +57,7 @@ begin
           gnt <= (others => '0');
         elsif (busy = '0') then
           gnt(0) <= req(0);
-          for I in 1 to req'left - 1 loop
+          for I in 1 to req'left loop
             prio_req := '0';
             for J in 1 to I loop
               prio_req := prio_req or req(J - 1);
